@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 
+#debug and build files
+\Debug|*.*
+
 # Folder config file
 Desktop.ini
 
