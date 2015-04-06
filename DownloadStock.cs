@@ -9,7 +9,6 @@ namespace PlotStock
     public class DownloadStock
     {
 
-
         public static List<List<double>> DownloadData(List<string> stockNameList, System.DateTime fromDate,
             System.DateTime toDate)
         {
@@ -19,12 +18,10 @@ namespace PlotStock
             //new string[] {"ADSK", "APPL",};
 
             string result = "";
-            List<double> stockHighList = new List<double>();
+
             List<List<double>> stockList = new List<List<double>>();
 
-            //System.DateTime fromDate = new DateTime();
-            //System.DateTime.TryParse("1/1/2005 12:00:00 AM" , out fromDate );
-            //System.DateTime toDate = System.DateTime.Today;
+
             MaasOne.Finance.YahooFinance.HistQuotesInterval interval =
                 MaasOne.Finance.YahooFinance.HistQuotesInterval.Monthly;
 
@@ -37,14 +34,14 @@ namespace PlotStock
             {
                 foreach (MaasOne.Finance.HistQuotesDataChain qd in resp.Result.Chains)// just one stock for now
                 {
+                    List<double> stockHighList = new List<double>();
                     string id = qd.ID;
                     //result = qd.ID;
                     foreach (MaasOne.Finance.HistQuotesData qx in qd)
                     {
                         stockHighList.Add(qx.High);
                     }
-                    
-                    //MaasOne.Finance.HistQuotesData last = qd[qd.Count - 1];
+
                     stockList.Add(stockHighList);
                 }
 
