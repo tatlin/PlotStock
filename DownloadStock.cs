@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+ * A Dynamo zero-touch library to pull stock values from the Yahoo Finance web service.
+ * This code is loosely based on this yahoo finance managed code sample:
+ * https://code.google.com/p/yahoo-finance-managed/wiki/sampleYahooManagedAPIHistQuotesDownload
+ * 
+ * Copyright (c) 2015 Matt Jezyk
+ * Licened under the MIT License, see project README.md file
+ * 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
